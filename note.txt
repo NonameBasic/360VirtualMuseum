@@ -1,0 +1,2 @@
+android:adjustViewBounds="true"
+android:scaleType="centerInside"
