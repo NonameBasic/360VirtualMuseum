@@ -33,18 +33,22 @@ public class MainActivity extends AppCompatActivity {
         TabHost.TabSpec tabSpec;
 
         Intent firstIntent = new Intent(MainActivity.this, FirstActivity.class);
-        tabSpec = tabHost.newTabSpec("First").setIndicator("First Tab").setContent(firstIntent);
+        tabSpec = tabHost.newTabSpec("First")
+                .setIndicator("", getResources().getDrawable(R.drawable.doremon48))
+                .setContent(firstIntent);
 
         tabHost.addTab(tabSpec);
 
         Intent secondIntent = new Intent(MainActivity.this, SecondActivity.class);
         tabSpec = tabHost.newTabSpec("Second");
-        tabSpec.setIndicator("Second Tab").setContent(secondIntent);
+        tabSpec.setIndicator("", getResources().getDrawable(R.drawable.nobita48))
+                .setContent(secondIntent);
         tabHost.addTab(tabSpec);
 
         Intent thirdIntent = new Intent(MainActivity.this, SecondActivity.class);
         tabSpec = tabHost.newTabSpec("Third");
-        tabSpec.setIndicator("Third Tab").setContent(secondIntent);
+        tabSpec.setIndicator("", getResources().getDrawable(R.drawable.kon48))
+                .setContent(secondIntent);
         tabHost.addTab(tabSpec);
 
     }   // setup
